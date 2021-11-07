@@ -20,7 +20,7 @@ Go语言模板引擎的使用可以分为三部分：定义模板文件、解析
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 1.定义模板
 	// 2.解析模板
-	t, err := template.ParseFiles("./hello.html")
+	t, err := template.ParseFiles("./hello.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err: %v\n", err)
 		return

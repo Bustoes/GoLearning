@@ -9,9 +9,8 @@ import (
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	bytes, _ := ioutil.ReadFile("E:\\HTML\\常用标签\\表单标签.html")
 
-	_, _ = fmt.Fprintf(w,string(bytes))
+	_, _ = fmt.Fprintf(w, string(bytes))
 }
-
 
 func main() {
 	http.HandleFunc("/hello", sayHello)

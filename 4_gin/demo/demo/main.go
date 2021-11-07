@@ -14,7 +14,6 @@ func sayHello(c *gin.Context) {
 		"message": "Hello golang!",
 	})
 
-
 }
 
 func main() {
@@ -25,7 +24,7 @@ func main() {
 	r.GET("/hello", sayHello)
 
 	r.GET("/book", func(c *gin.Context) {
-		c.JSON(200, gin.H {
+		c.JSON(200, gin.H{
 			"method": "GET",
 		})
 	})
@@ -48,10 +47,7 @@ func main() {
 		})
 	})
 
-
 	//启动服务
 	r.Run(":9090")
-
-
 
 }
